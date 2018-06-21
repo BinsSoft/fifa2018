@@ -1,0 +1,19 @@
+.table {
+	font-size: 13px;
+	font-weight: normal;
+}
+.table tbody {
+	margin-top: 5px;
+}
+tr.heading {
+    background: #072356;
+    color: #c7c7c7;
+    padding: 5px;
+}
+tr.heading th {
+    padding: 5px;
+    font-weight: normal;
+}
+.table td {
+	padding: 5px;
+}

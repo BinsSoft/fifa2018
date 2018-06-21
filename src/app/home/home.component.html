@@ -1,0 +1,59 @@
+<div class="home-content">
+	<div class="home-sliders">
+	 <owl-carousel
+	     [options]="{items: 1, dots: false, navigation: false,autoplay:true,autoplayTimeout:5000,autoplayHoverPause:true,loop:true}"
+	     [items]="matchList"
+	     [carouselClasses]="['owl-theme', 'row', 'sliding']">
+	     <div class="item" *ngFor="let match of matchList;let i = index">
+	         <div class="backcontainer stadium st-{{ match.stadium.id }}">
+				<table class="table">
+					<tr>
+						<td colspan="3">
+							<p style="text-transform: capitalize;">{{ match.groupName }}</p>
+							<p>{{ match.stadium.name }}, {{ match.stadium.city }}</p>
+						</td>
+					</tr>
+					<tr>
+						<td width="35%">
+							<span class="flag {{ (match.home_team.iso2)?match.home_team.iso2:'no-pic' }}"></span>
+							<p class="co-name">{{ (match.home_team.name)?match.home_team.name:match.home_team }}</p>
+						</td>
+						<td class="co-name mid-td">
+							<p>{{ match.date|date:'HH:mm' }}</p>
+							<p>{{ match.date|date:'HH:mm' : '+0300' }}<br/>(Local Time)</p>
+						</td>
+						<td width="35%">
+							<span class="flag {{ (match.away_team.iso2)?match.away_team.iso2: 'no-pic' }}"></span>
+							<p class="co-name">{{ (match.away_team.name)?match.away_team.name: match.away_team }}</p>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<!-- <button class="btn btn-match-center">Match Center</button> -->
+						</td>
+					</tr>
+
+				</table>
+			</div>
+	     </div>
+	 </owl-carousel>
+
+		
+	</div>
+	<div class="menu-container">
+		<table class="table" cellpadding="0" cellspacing="0">
+			<tr>
+	 			<td class="{{ (component=='comming')? 'active':'' }}"><a (click)="component='comming'" >Comming Matches</a></td>
+	 			<td class="{{ (component=='result')? 'active':'' }}"><a (click)="component='result'" >Results</a></td>
+	 			<td class="{{ (component=='point')? 'active':'' }}"><a (click)="component='point'" >Point Tables</a></td>
+	 			<td class="{{ (component=='team')? 'active':'' }}"><a (click)="component='team'" >Teams</a></td>
+	 		</tr>
+ 		</table>
+	</div>
+	<div class="main-container">
+		<app-upcoming *ngIf="component=='comming'"></app-upcoming>
+		<app-result *ngIf="component=='result'"></app-result>
+		<app-pointtables *ngIf="component=='point'"></app-pointtables>
+		<app-teams *ngIf="component=='team'"></app-teams>
+	</div>
+</div>

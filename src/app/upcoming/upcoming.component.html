@@ -1,0 +1,35 @@
+<div class="laoder-conatiner" *ngIf="matchList.length == 0">
+	<span class="loader"></span> <br/>
+	Please Wait...
+</div>
+<div class="schedule-list">
+<div class="item" *ngFor="let match of matchList;let i = index">
+	<table class="table" cellpadding="0" cellspacing="0">
+		<tr class="header-schedule-list">
+			<td colspan="3">
+				<div class="pull-left" style="width:50%;">
+				<p style="text-transform: capitalize;">{{ match.groupName }}</p>
+				<p style="text-transform: capitalize;">{{ match.stadium.name }}, {{ match.stadium.city }}</p>
+				</div>
+				<div class="pull-right text-right" style="width:50%;">
+				<p>{{ match.date|date:'MMM dd, yyyy HH:mm' : '+0300' }}<br/> (Local Time)</p>
+				
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td width="40%" class="text-center">
+				<span class="flag {{ (match.home_team.iso2)?match.home_team.iso2:'no-pic' }}"></span>
+				<p class="co-name">{{ (match.home_team.name)?match.home_team.name:match.home_team }}</p>
+			</td>
+			<td class="text-center"><p>{{ match.date|date:'HH:mm' }}</p></td>
+			<td width="40%" class="text-center">
+				<span class="flag {{ (match.away_team.iso2)?match.away_team.iso2: 'no-pic' }}"></span>
+				<p class="co-name">{{ (match.away_team.name)?match.away_team.name: match.away_team }}</p>
+			</td>
+		</tr>
+		
+
+	</table>
+</div>
+</div>

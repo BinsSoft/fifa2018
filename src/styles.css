@@ -1,1 +1,138 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	font-family: "Roboto";
+	margin: 0;
+}
+.header {
+	position: absolute;
+	height: 90px;
+	overflow: hidden;
+	z-index: 999;
+	
+}
+.logo-container {
+	padding: 5px;
+}
+.logo-container img {
+	height: 80px;
+}
+.flag {
+	width: 64px;
+	height: 52px;
+	display: inline-block;
+	background-image: url('assets/teams/flags.png');
+}
+.flag.no-pic { background-image: url('assets/teams/no-flag.ico'); background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;}
+.flag.ru {background-position: -65px -257px;}
+.flag.sa {background-position: -128px -257px;}
+.flag.eg {background-position: -191px -65px;}
+.flag.uy {background-position: 1px -322px;}
+.flag.pt {background-position: -320px -193px;}
+.flag.es {background-position: -256px -65px;}
+.flag.ma {background-position: -321px -129px;}
+.flag.ir {background-position: -64px -129px;}
+.flag.fr {background-position: -320px -65px;}
+.flag.au {background-position: -63px 0px ;}
+.flag.pe {background-position: -192px -192px;}
+.flag.dk {background-position: -127px -65px;}
+
+.flag.ar {background-position: 0px 0px;}
+.flag.is {background-position: -127px -129px;}
+.flag.hr {background-position: 1px -129px;}
+.flag.ng {background-position: -64px -193px;}
+.flag.br {background-position: -192px -1px;}
+.flag.ch {background-position: -255px -1px;}
+.flag.cr {background-position: 0px -65px;}
+.flag.rs {background-position: 1px -257px;}
+.flag.de {background-position: -63px -65px;}
+.flag.mx {background-position: 1px -193px;}
+.flag.se {background-position: -191px -257px;}
+.flag.kr {background-position: -255px -130px;}
+.flag.be {background-position: -128px -1px;}
+.flag.pa {background-position: -128px -192px;}
+.flag.tn {background-position: -320px -257px;}
+.flag.gb-eng {background-image: url('assets/teams/ENG.jpg')}
+.flag.pl {background-position: -256px -193px;}
+.flag.sn {background-position: -256px -257px;}
+.flag.co {background-position: -320px -1px;}
+.flag.jp {background-position: -191px -130px;}
+
+.stadium{
+	height: 400px;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+.stadium.st-1{ background-image: url('assets/stadiums/1.jpg');  }
+.stadium.st-2{ background-image: url('assets/stadiums/2.jpg');  }
+.stadium.st-3{ background-image: url('assets/stadiums/3.jpg');  }
+.stadium.st-4{ background-image: url('assets/stadiums/4.jpg');  }
+.stadium.st-5{ background-image: url('assets/stadiums/5.jpg');  }
+.stadium.st-6{ background-image: url('assets/stadiums/6.jpg');  }
+.stadium.st-7{ background-image: url('assets/stadiums/7.jpg');  }
+.stadium.st-8{ background-image: url('assets/stadiums/8.jpg');  }
+.stadium.st-9{ background-image: url('assets/stadiums/9.jpg');  }
+.stadium.st-10{ background-image: url('assets/stadiums/10.jpg');  }
+.stadium.st-11{ background-image: url('assets/stadiums/11.jpg');  }
+.stadium.st-12{ background-image: url('assets/stadiums/12.jpg');  }
+
+.home-sliders {
+	position: relative;
+}
+.slider-item {
+    /*position: absolute;*/
+    /*display: inline-block;*/
+}
+.table {
+	width: 100%;
+
+}
+.stadium .table {
+	background: rgba(0,0,0,0.6);
+    color: #FFF;
+    font-family: "Roboto";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    height: 100%;
+}
+.co-name{
+	font-size: 20px;
+}
+.stadium .table p {
+	font-size: 12px;
+}
+.schedule-list {
+	font-size: 12px;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.laoder-conatiner {
+	text-align: center;
+	font-size: 13px; 
+}
+.laoder-conatiner .loader{
+	background-image: url('assets/spinner.gif');	
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+}

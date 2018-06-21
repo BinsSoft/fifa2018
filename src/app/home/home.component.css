@@ -1,0 +1,20 @@
+button.btn.btn-match-center {
+    padding: 5px 10px;
+    background: #cf5951;
+    border: none;
+    color: #FFF;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.menu-container table td {
+	text-align: center;
+	padding: 15px 5px;font-size: 12px;
+}
+.menu-container table  a {
+	text-decoration: none;
+	color: #6d6d6d;
+}
+.menu-container table td.active {
+	background: #CCC;
+}

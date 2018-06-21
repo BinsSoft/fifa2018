@@ -1,0 +1,30 @@
+
+<div class="laoder-conatiner" *ngIf="standListGroup.length == 0">
+	<span class="loader"></span> <br/>
+	Please Wait...
+</div>
+<table class="table" cellspacing="0" cellspacing="0">
+	<tbody *ngFor="let group of standListGroup">
+		<tr class="heading">
+			<th colspan="6">Group {{group}}</th>
+		</tr>
+		<tr  class="heading">
+			<th class="text-left">Team</th>
+			<th class="text-left">P</th>
+			<th class="text-left">G</th>
+			<th class="text-left">GA</th>
+			<th class="text-left">GD</th>
+			<th class="text-left">P</th>
+		</tr>
+		<tr *ngFor="let team of standList[group]">
+			<td>{{ team.team }}</td>
+			<td>{{ team.playedGames }}</td>
+			<td>{{ team.goals }}</td>
+			<td>{{ team.goalsAgainst }}</td>
+			<td>{{ team.goalDifference }}</td>
+			<td>{{ team.points }}</td>
+		</tr>
+		<tr><td colspan="6" style="height: 10px;"></td></tr>
+	</tbody>
+
+</table>
