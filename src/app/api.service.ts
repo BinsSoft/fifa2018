@@ -153,7 +153,7 @@ export class ApiService {
 
 	getPointTable()
 	{
-		let url = 'http://api.football-data.org/v1/competitions/467/leagueTable';
+		let url = 'https://api.football-data.org/v1/competitions/467/leagueTable';
 		return this.http.get(url, {
 	  headers: new HttpHeaders({
 	  	'X-Auth-Token' : '12bb1baac726490193b9bd6e06f2cb82'
