@@ -82,7 +82,6 @@ export class ApiService {
 			for (let match of knockout.matches) {
 				match.groupName = knockout.name;
 				let hTeam = this.getTeamDetails(match.home_team);
-
 				if (hTeam == undefined) {
 					if (typeof match.home_team == 'number') {
 						match.home_team = match.home_team.toString();
@@ -90,6 +89,8 @@ export class ApiService {
 					} else {
 						match.home_team = match.home_team.replace("_"," ");	
 					}
+				} else {
+					match.home_team = hTeam;
 				}
 				let aTeam = this.getTeamDetails(match.away_team);
 				if (aTeam == undefined ) {
@@ -99,6 +100,8 @@ export class ApiService {
 					} else {
 						match.away_team = match.away_team.replace("_"," ");	
 					}
+				}  else {
+					match.away_team = aTeam;
 				}
 				match.stadium = this.getStadiumDetails(match.stadium);
 				match.date = new Date(match.date);
