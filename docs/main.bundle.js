@@ -111,6 +111,9 @@ var ApiService = /** @class */ (function () {
                         match.home_team = match.home_team.replace("_", " ");
                     }
                 }
+                else {
+                    match.home_team = hTeam;
+                }
                 var aTeam = this.getTeamDetails(match.away_team);
                 if (aTeam == undefined) {
                     if (typeof match.away_team == 'number') {
@@ -120,6 +123,9 @@ var ApiService = /** @class */ (function () {
                     else {
                         match.away_team = match.away_team.replace("_", " ");
                     }
+                }
+                else {
+                    match.away_team = aTeam;
                 }
                 match.stadium = this.getStadiumDetails(match.stadium);
                 match.date = new Date(match.date);
